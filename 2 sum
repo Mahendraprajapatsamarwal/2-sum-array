@@ -1,0 +1,19 @@
+let arr = [3,5,7,6,8,5];
+let target = 13;
+ 
+ let twoSum = function(arr, target) {
+     let str = {};
+    for(let i = 0 ; i < arr.length ; i++){
+        let n = arr[i];
+
+        if(str[target-n] >= 0){
+            return [str[target-n],i]
+        } 
+        else {
+            str[n] = i;   //use map to store the value and index position
+        }
+    }
+};
+
+console.log(twoSum(arr,target));
+
